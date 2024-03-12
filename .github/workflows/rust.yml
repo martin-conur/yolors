@@ -12,7 +12,10 @@ env:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        target: [x86_64, aarch64]
 
     steps:
     - uses: actions/checkout@v3
