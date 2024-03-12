@@ -12,11 +12,10 @@ You can ask for classification:
 
 or Pose estimation:
 
- '''console
+ ```console
  cargo run --release --  --task "pose" demo_images/running1.jpg
- '''
+ ```
  
- result:
  !["result1"](https://github.com/martin-conur/yolors/blob/main/demo_images/running1.pose.jpg)
 
 ## features:
