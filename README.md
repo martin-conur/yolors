@@ -4,7 +4,13 @@ YOLO v8 CLI implementation using [Candle](https://github.com/huggingface/candle/
 !["people classified by yolors](https://github.com/martin-conur/yolors/blob/main/demo_images/people.classification.jpg)
 
 ## Description
+YOLOrs is a CLI tool for image classification, pose estimation or (in the future) image segmentation. Uses [ultralytics](https://yolov8.com) implementation (v8) of the YOLO (You Only Look Once) algorithms family. 
 
+YOLOrs is written in Rust, using HuggingFace's Candle library. Is Fast, Light, Secure and reliable.
+
+
+## Installation
+🚧
 
 ## Example
 You can ask for classification: 
@@ -26,6 +32,8 @@ or Pose estimation:
 ## features:
   * blazingly fast
   * easy to use
+  * Secure
+  * Reliable
   * Written in Rust 🤘
 
 ## TODO:
