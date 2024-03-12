@@ -47,6 +47,7 @@ or Pose estimation:
 
 ## TODO:
  * ~~Add CI github workflow~~
+ * Add JSON output capabilities
  * Add cargo tests
  * Cross compilation and distribution
  * Add segmentation
