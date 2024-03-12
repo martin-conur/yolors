@@ -17,7 +17,7 @@ or Pose estimation:
  '''
  
  result:
- [result1](https://github.com/martin-conur/yolors/blob/main/demo_images/running1.pose.jpg)
+ !["result1"](https://github.com/martin-conur/yolors/blob/main/demo_images/running1.pose.jpg)
 
 ## features:
   * blazingly fast
