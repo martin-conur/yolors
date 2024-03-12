@@ -9,6 +9,11 @@ YOLO v8 CLI implementation using [Candle](https://github.com/huggingface/candle/
 ## Example
 You can ask for classification: 
 
+``` console
+cargo run --release demo_images/people.jpg    
+```
+!["result classification"](https://github.com/martin-conur/yolors/blob/main/demo_images/running2.pp.jpg)
+
 
 or Pose estimation:
 
@@ -16,7 +21,7 @@ or Pose estimation:
  cargo run --release --  --task "pose" demo_images/running1.jpg
  ```
  
- !["result1"](https://github.com/martin-conur/yolors/blob/main/demo_images/running1.pose.jpg)
+ !["result pose"](https://github.com/martin-conur/yolors/blob/main/demo_images/running1.pose.jpg)
 
 ## features:
   * blazingly fast
@@ -24,5 +29,6 @@ or Pose estimation:
   * Written in Rust 🤘
 
 ## TODO:
+ * Cross compilation and distribution
  * Add segmentation
  * Add video capabilities
