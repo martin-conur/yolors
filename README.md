@@ -45,3 +45,11 @@ cargo run --example yolo-v8 --release -- \
 - `--legend-size`: the size of the characters to print.
 - `--model`: use a local model file rather than downloading it from the hub.
 
+<<<<<<< HEAD
+=======
+* Blazingly fast
+* Easy to use
+* Written in Rust <3
+
+Originally based on the Candle implementation. 
+>>>>>>> 2155187e3b64c934e1b22772d1c0308a70d1508a
