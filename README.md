@@ -3,10 +3,21 @@ YOLO v8 CLI implementation using [Candle](https://github.com/huggingface/candle/
 
 !["people classified by yolors](https://github.com/martin-conur/yolors/blob/main/demo_images/people.classification.jpg)
 
-## Descrition
+## Description
 
 
 ## Example
+You can ask for classification: 
+
+
+or Pose estimation:
+
+ '''console
+ cargo run --release --  --task "pose" demo_images/running1.jpg
+ '''
+ 
+ result:
+ [result1](https://github.com/martin-conur/yolors/blob/main/demo_images/running1.pose.jpg)
 
 ## features:
   * blazingly fast
