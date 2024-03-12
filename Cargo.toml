@@ -32,7 +32,7 @@ rusttype = { version = "0.9", default-features = false }
 safetensors = "0.4.1"
 serde = { version = "1.0.171", features = ["derive"] }
 serde_plain = "1.0.2"
-serde_json = "1.0.99"
+serde_json = "1.0.114"
 thiserror = "1"
 tokenizers = { version = "0.15.0", features = ["onig"] }
 tracing = "0.1.37"

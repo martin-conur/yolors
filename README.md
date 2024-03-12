@@ -46,7 +46,7 @@ or Pose estimation:
   * Written in Rust 🤘
 
 ## TODO:
- * Add CI github workflow
+ * ~~Add CI github workflow~~
  * Add cargo tests
  * Cross compilation and distribution
  * Add segmentation

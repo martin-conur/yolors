@@ -12,6 +12,7 @@ use candle_nn::{Module, VarBuilder};
 use candle_transformers::object_detection::{non_maximum_suppression, Bbox, KeyPoint};
 use clap::{Parser, ValueEnum};
 use image::DynamicImage;
+// use serde_json::json;
 
 // Keypoints as reported by ChatGPT :)
 // Nose
