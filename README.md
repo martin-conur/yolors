@@ -11,7 +11,12 @@ YOLOrs is written in Rust, using HuggingFace's Candle library. Is Fast, Light, S
 
 ## Installation
 🚧
-For the moment, you have to clone this repo and (with Rust and Cargo installed) run one of the examples below eg. 
+For the moment, you have to clone this repo:
+```console
+ git clone https://github.com/martin-conur/yolors.git
+```
+
+and (with Rust and Cargo installed) run one of the examples below eg. 
  ```console
 cargo run --release demo_images/people.jpg 
 ```
