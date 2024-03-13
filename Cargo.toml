@@ -1,6 +1,13 @@
 [package]
 name = "yolors"
 version = "0.1.0"
+authors = ["Martin Contreras Uribe <martincontrerasur@gmail.com>"]
+license = "MIT OR Apache-2.0"
+description = "A tool to search files"
+homepage = "https://github.com/martin-conur/yolors"
+repository = "https://github.com/martin-conur/yolors"
+categories = ["command-line-utilities"]
+keywords = ["cli", "computer-vision", "ml", "yolo", "candle"]
 edition = "2021"
 readme = "README.md"
 
@@ -46,3 +53,7 @@ candle-core = { git = "https://github.com/huggingface/candle.git", version = "0.
 candle-nn = { git = "https://github.com/huggingface/candle.git", version = "0.4.1" }
 candle-examples = "0.4.1"
 candle-transformers = { git = "https://github.com/huggingface/candle.git", version = "0.4.1" }
+
+[dev-dependencies]
+assert_cmd = "2.0.14"
+predicates = "3.1.0"

@@ -12,7 +12,7 @@ use candle_nn::{Module, VarBuilder};
 use candle_transformers::object_detection::{non_maximum_suppression, Bbox, KeyPoint};
 use clap::{Parser, ValueEnum};
 use image::DynamicImage;
-// use serde_json::json;
+use serde_json::json;
 
 // Keypoints as reported by ChatGPT :)
 // Nose
@@ -102,12 +102,24 @@ pub fn report_detect(
     let font = Vec::from(include_bytes!("roboto-mono-stripped.ttf") as &[u8]);
     let font = rusttype::Font::try_from_vec(font);
     for (class_index, bboxes_for_class) in bboxes.iter().enumerate() {
-        for b in bboxes_for_class.iter() {
-            println!(
-                "{}: {:?}",
-                candle_examples::coco_classes::NAMES[class_index],
-                b
+        for (i, b) in bboxes_for_class.iter().enumerate() {
+
+            // RETURNING JSON STYLE
+            
+            let json_b = json!(
+                {
+                    "id": i,
+                    "class": candle_examples::coco_classes::NAMES[class_index],
+                    "xmin": b.xmin,
+                    "ymin": b.ymin,
+                    "xmax": b.xmax,
+                    "ymax": b.ymax,
+                    "confidence": b.confidence
+                }
             );
+
+            println!("{}", serde_json::to_string_pretty(&json_b).unwrap());
+
             let xmin = (b.xmin * w_ratio) as i32;
             let ymin = (b.ymin * h_ratio) as i32;
             let dx = (b.xmax - b.xmin) * w_ratio;
@@ -195,6 +207,7 @@ pub fn report_pose(
     let h_ratio = initial_h as f32 / h as f32;
     let mut img = img.to_rgb8();
     for b in bboxes.iter() {
+        // EDITAR ACÁ
         println!("{b:?}");
         let xmin = (b.xmin * w_ratio) as i32;
         let ymin = (b.ymin * h_ratio) as i32;
@@ -272,6 +285,7 @@ pub struct Args {
     #[arg(long, value_enum, default_value_t = Which::S)]
     which: Which,
 
+    #[arg(required=true)]
     images: Vec<String>,
 
     /// Threshold for the model confidence level.
