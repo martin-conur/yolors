@@ -1,6 +1,13 @@
 [package]
 name = "yolors"
 version = "0.1.0"
+authors = ["Martin Contreras Uribe <martincontrerasur@gmail.com>"]
+license = "MIT OR Apache-2.0"
+description = "A tool to search files"
+homepage = "https://github.com/martin-conur/yolors"
+repository = "https://github.com/martin-conur/yolors"
+categories = ["command-line-utilities"]
+keywords = ["cli", "computer-vision", "ml", "yolo", "candle"]
 edition = "2021"
 readme = "README.md"
 
