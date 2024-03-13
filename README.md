@@ -42,8 +42,38 @@ or Pose estimation:
  
  !["result pose"](https://github.com/martin-conur/yolors/blob/main/demo_images/running1.pose.jpg)
 
+ ## Commands
+ ```console
+ Arguments:
+  <IMAGES>... 
+    [REQUIRED]
+
+Options:
+      --cpu
+          Run on CPU rather than on GPU
+      --tracing
+          Enable tracing (generates a trace-timestamp.json file)
+      --model <MODEL>
+          Model weights, in safetensors format
+      --which <WHICH>
+          Which model variant to use [default: s] [possible values: n, s, m, l, x]
+      --confidence-threshold <CONFIDENCE_THRESHOLD>
+          Threshold for the model confidence level [default: 0.25]
+      --nms-threshold <NMS_THRESHOLD>
+          Threshold for non-maximum suppression [default: 0.45]
+      --task <TASK>
+          The task to be run [default: detect] [possible values: detect, pose]
+      --legend-size <LEGEND_SIZE>
+          The size for the legend, 0 means no legend [default: 14]
+  -h, --help
+          Print help
+  -V, --version
+          Print version
+ ```
+
 ## features:
   * blazingly fast
+  * tiny (6 MB)
   * easy to use
   * Secure
   * Reliable
