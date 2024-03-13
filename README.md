@@ -9,23 +9,27 @@ YOLOrs is a CLI tool for image classification, pose estimation or (in the future
 YOLOrs is written in Rust, using HuggingFace's Candle library. Is Fast, Light, Secure and reliable.
 
 
-## Installation
-🚧
-For the moment, you have to clone this repo:
+## Installation 🚧
+You can install it with cargo:
+```console
+  cargo install yolors
+```
+
+Or alternatively, you can clone this repo:
 ```console
  git clone https://github.com/martin-conur/yolors.git
 ```
 
-and (with Rust and Cargo installed) run one of the examples below eg. 
+and run one of the examples below eg. 
  ```console
-cargo run --release demo_images/people.jpg 
+yolors demo_images/people.jpg 
 ```
 
-## Example
+## Examples
 You can ask for classification: 
 
 ``` console
-cargo run --release demo_images/people.jpg    
+yolors demo_images/people.jpg    
 ```
 !["result classification"](https://github.com/martin-conur/yolors/blob/main/demo_images/running2.pp.jpg)
 
@@ -33,7 +37,7 @@ cargo run --release demo_images/people.jpg
 or Pose estimation:
 
  ```console
- cargo run --release --  --task "pose" demo_images/running1.jpg
+ yolors  --task "pose" demo_images/running1.jpg
  ```
  
  !["result pose"](https://github.com/martin-conur/yolors/blob/main/demo_images/running1.pose.jpg)
@@ -47,8 +51,8 @@ or Pose estimation:
 
 ## TODO:
  * ~~Add CI github workflow~~
- * Add JSON output capabilities
- * Add cargo tests
+ * ~~Add JSON output ~~capabilities 50% done
+ * ~~Add cargo tests~~
  * Cross compilation and distribution
  * Add segmentation
  * Add video capabilities
