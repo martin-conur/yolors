@@ -207,6 +207,7 @@ pub fn report_pose(
     let h_ratio = initial_h as f32 / h as f32;
     let mut img = img.to_rgb8();
     for b in bboxes.iter() {
+        // EDITAR ACÁ
         println!("{b:?}");
         let xmin = (b.xmin * w_ratio) as i32;
         let ymin = (b.ymin * h_ratio) as i32;
@@ -284,6 +285,7 @@ pub struct Args {
     #[arg(long, value_enum, default_value_t = Which::S)]
     which: Which,
 
+    #[arg(required=true)]
     images: Vec<String>,
 
     /// Threshold for the model confidence level.
